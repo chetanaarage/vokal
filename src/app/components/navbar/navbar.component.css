@@ -1,0 +1,41 @@
+.navbar {
+   background-color: hsla(0, 0%, 0%, 0.45);
+   background: rgba(0, 0, 0, 0.75);
+   border-color: transparent;
+}
+
+.navbar li { color: #000 } 
+
+
+
+.dropdown {
+    display:inline-block;
+    margin-left:20px;
+    padding:10px;
+  }
+
+
+.glyphicon-bell {
+   
+    font-size:1.5rem;
+    padding-top: inherit;
+  }
+
+
+ 
+.glyphicon-circle-arrow-right {
+      margin-left:10px;     
+   }
+  
+ 
+.dropdown-menu.divider {
+  margin:5px 0;          
+  }
+
+
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #555;
+    background-color: #736e6e;
+}
+

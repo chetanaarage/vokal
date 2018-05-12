@@ -1,0 +1,28 @@
+
+
+<!-- <button type="button" (click)="fetchallAddresses()">GetAddresses</button> -->
+
+<!-- <h3> User Addresses</h3> -->
+
+<table *ngIf="authService.loggedIn()" style="width:50%">
+<tr>
+    <th style="text-align: center;">formatted_address</th> 
+    <th style="text-align: center;">latitude</th> 
+    <th style="text-align: center;">longitude</th>
+</tr>
+	
+<tr *ngFor="let address of addressArray">
+ 	<td>{{address.formatted_address}}</td>
+ 	<td>{{address.latitude}}</td>
+ 	<td>{{address.longitude}}</td>
+</tr>
+</table>
+    
+
+<!-- <div *ngFor="let address of addressArray">
+
+    {{address.formatted_address}}
+    {{address.latitude}}
+    {{address.longitude}}
+   
+ </div> -->

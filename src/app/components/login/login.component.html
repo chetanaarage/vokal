@@ -1,0 +1,27 @@
+<div class="container">
+	<div class="row">
+		 <div class="Absolute-Center is-Responsive">
+
+<form (submit)="onLoginSubmit()"> 
+
+	<h2 class="page-header" style="margin-left: 85pt;border-bottom: none;">Login</h2>
+	<div class="form-group input-group" >
+		<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+		<input type="text" [(ngModel)]="username" name="username" class="form-control" placeholder="username">
+	</div>
+	<div class="form-group input-group">
+		<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+	<input type="password" [(ngModel)]="password" name="password" class="form-control" placeholder="password">
+	</div>
+	<div class="form-group text-center">
+	<a [routerLink]="['/forgotten-password']">
+		<span>I've forgotten my password</span>
+	</a>
+	</div>	
+	<input type="submit" class="btn btn-primary" value="Login" style="width: 240pt">
+</form>
+	</div>
+  </div>
+</div>
+	
+

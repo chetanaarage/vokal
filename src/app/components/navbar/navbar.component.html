@@ -1,0 +1,105 @@
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle Navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					
+			</button>
+      <div class="navbar-collapse js-navbar-collapse">
+      <ul class="nav navbar-nav page-menu">
+        <li><a class="navbar-brand" [routerLink]="['/text']" style="color: whitesmoke; margin-top: 10pt;
+              margin-right: 20pt;">
+      <span class="glyphicon glyphicon-home"></span></a></li>
+      <li><a class="navbar-brand" [routerLink]="['/']" style="color: whitesmoke;">
+      <h5 style="color: whitesmoke;">VOKAL</h5></a>
+      <br/>
+      <h6 style="color: whitesmoke;"></h6></li>
+    <!--   <li *ngIf="user">
+       <li *ngIf="authService.loggedIn()" style="margin-top: 20pt;margin-left: 20pt;color: blanchedalmond;">Welcome {{user.username}}..!!</li> -->
+      <!--  <li *ngIf="user"> -->
+        <!-- <li style="margin-top: 13pt;">          
+          <input type="text" [(ngModel)]="searchAddress" (keyup.enter)="onSearch(searchAddress)" 
+          name="searchAddress" placeholder="Search.."> {{address}}
+          <button type="button" (click)="onSearch(searchAddress)"><i class="fa fa-search"></i></button>
+        </li> -->
+        <li style="margin-top: 13pt;">
+        <input type="text" [(ngModel)] = "address"  name="address" style="width: 250pt;" 
+        (setAddress) = "getAddress($event)"  googleplace/>
+      </li>
+
+<!-- onselect="onPlaceSelect($event)" -->
+     <!--  (click)="onPlaceSelect($event)" -->
+      <!--  <div  *ngFor="let vehicle of vehicles">
+        <input type="radio" name="radanswer" (click)="onvehiclechange(vehicle,0)">
+        <label for="radio_value"> {{vehicle.name}} {{vehicle.total_no}}</label><br>
+      </div> -->
+
+    <!-- <select class="dropdown" (change)="onchange($event.target.value,1)">
+      <option selected value="select"> --Select an option--</option>
+      <option  *ngFor="let planet of planets"> 
+        {{planet.name}}
+        </option>
+    </select> -->
+       <!-- <form class="example" action="action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form> -->
+    <!-- </li> -->
+      </ul>
+			
+      </div>
+
+		
+	    </div>
+     
+     <!-- Right part-->
+
+     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+
+      </ul>
+     
+      <ul class="nav navbar-nav navbar-right">
+         <li>
+          <a *ngIf="authService.loggedIn()"[routerLinkActive]="['active']" 
+              [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/profile']" style="color: whitesmoke;">Profile </a>
+        </li>
+        <li><a *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" 
+              [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/login']" style="color: whitesmoke;    margin-top: 7pt;">
+              <span class="fa fa-unlock-alt"></span>
+              Login </a>
+        </li>
+        <li class="dropdown">
+          <a *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" 
+              [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/register']" 
+              style="color: whitesmoke;">
+              <span class="fa fa-user"></span>
+              Register </a>
+        </li>
+         <li *ngIf="authService.loggedIn()"><a (click)="onLogoutClick()" href="#" 
+              style="color: whitesmoke;">Logout </a>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+
+ 	</div>
+ </nav>
+
+<app-home [addressArray]="listAddresses">
+
+</app-home>
+<!-- <div *ngFor="let address of listAddresses">
+  {{address}}
+
+</div> -->
+
+
+ 
+
+
+
+   
